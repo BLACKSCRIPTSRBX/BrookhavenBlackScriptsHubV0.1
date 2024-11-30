@@ -1,0 +1,18 @@
+local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))();
+local v1=v0:MakeWindow({Name="BLACKSCRIPTS HUB | BROOKHAVEN v0.1",HidePremium=false,SaveConfig=true,ConfigFolder="BlackScriptsHub"});
+local v2=v1:MakeTab({Name="Main",Icon="rbxassetid://4483345998",PremiumOnly=false});
+local v3=v1:MakeTab({Name="Trolling",Icon="rbxassetid://4483345998",PremiumOnly=false});
+local v4=v1:MakeTab({Name="Teleport",Icon="rbxassetid://4483345998",PremiumOnly=false});
+local v5=v1:MakeTab({Name="Others",Icon="rbxassetid://4483345998",PremiumOnly=false});
+local v6=v2:AddSection({Name="Welcome!"});
+v6:AddLabel("Welcome to BLACKSCRIPTS HUB!");
+v6:AddParagraph("Creators:", "https://t.me/BlackScriptsRbx");
+local v7=v3:AddSection({Name="Trolling Functions"});
+local v8=v7:AddToggle({Name="Kill All",Default=false,Callback=function(v9)if v9 then local v10=game.Players.LocalPlayer.Character;local v11=v10:FindFirstChild("HumanoidRootPart");for v12,v13 in next,game.Players:GetChildren()do if v13.Name~=game.Players.LocalPlayer.Name and v13.Character and v13.Character:FindFirstChild("Humanoid")then local v14=v13.Character;local v15=v14:FindFirstChild("HumanoidRootPart");v11.CFrame=CFrame.new(v15.Position-Vector3.new(0,2,0));wait(2);v11.CFrame=CFrame.new(Vector3.new(-10000,-10000,-10000));wait(0.1);end end else local v10=game.Players.LocalPlayer.Character;local v11=v10:FindFirstChild("HumanoidRootPart");v11.CFrame=CFrame.new(Vector3.new(0,10,0));end end});
+local v16=v7:AddButton({Name="UnBan",Callback=function()for v17=11,37 do local v18=workspace:FindFirstChild("PropBlocker"..v17);if v18 then v18:Destroy();v0:MakeNotification({Title="Success!",Content="PropBlocker"..v17.." removed.",Image="rbxassetid://4483345998",Time=3});end end end});
+local v19=v4:AddSection({Name="Teleport Functions"});
+local v20=v19:AddButton({Name="Spawn",Callback=function()local v21=game.Players.LocalPlayer.Character;local v22=v21:FindFirstChild("HumanoidRootPart");v22.CFrame=CFrame.new(90,5,0);end});
+local v23=v19:AddTextbox({Name="Player Name",Default="",Callback=function(v24)local v25=game.Players:FindFirstChild(v24);if v25 then local v26=game.Players.LocalPlayer.Character;local v27=v26:FindFirstChild("HumanoidRootPart");if v25.Character and v25.Character:FindFirstChild("HumanoidRootPart")then local v28=v25.Character:FindFirstChild("HumanoidRootPart");v27.CFrame=CFrame.new(v28.Position+Vector3.new(0,5,0));else v0:MakeNotification({Title="Error!",Content="Player not found.",Image="rbxassetid://4483345998",Time=3});end else v0:MakeNotification({Title="Error!",Content="Player not found.",Image="rbxassetid://4483345998",Time=3});end end});
+local v29=v5:AddSection({Name="Other Scripts"});
+v29:AddButton({Name="Infinite Yield",Callback=function()loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();end});
+v29:AddButton({Name="vFly",Callback=function()loadstring(game:HttpGet("https://raw.githubusercontent.com/S33dedL0rdz/-Unknown-Roblox-Vfly-Script-.file/main/Rbxscript.c"))();end});
